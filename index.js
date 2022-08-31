@@ -3,49 +3,13 @@
 //datos generales
 
 
-let intento = 1;
-usuario = prompt('ingrese el usuario correcto');
-
-while(usuario != 'Guido'){
-    alert('Usuario invalido')
-    
-    if(intento === 10){
-        break;
-    }else(alert(`Intentaste ${intento} veces `));
-    intento++;
-    
-    usuario = prompt('ingrese el usuario correcto');
-};
-//repite en la consola tantas veces como intentos fallidos
-for(let i = 1; i<= intento; i++) {
-    console.log(`${i} - ${usuario}`);
-};
-
-
-/*let origenViaje = prompt('Ingrese provincia de origen');
-let destinoViaje = prompt('Ingrese provincia destino'); */
-
-/* 
-calculadora de peso
-
-si movil master o camion = limitePeso A o B
-
-pesoCarga = (pesoFisiologica or pesoDextrosa) * unidadesCarga = resultado<=limitePeso */
-
-/* let usuario = prompt('Ingrese su usuario');
-
-alert(`Hola ${usuario}, bienvenido a la calculadora de peso`)
-
 let pesoFisiologica = 8;
 let pesoDextrosa= 11;
 
+usuario = prompt('ingrese el usuario correcto');
 
-let fechaViaje = prompt('Ingrese fecha de viaje');
-while(!fechaViaje){
-    alert('No ha ingresado fecha de viaje, vuelva a intentarlo');
-    fechaViaje = prompt('Ingrese fecha de viaje');
-};
-    
+alert(`Hola ${usuario}, bienvenido a la calculadora de peso`);
+
 let movilAfectado = prompt('Ingrese movil Master o Iveco').toLowerCase;
 
     if (movilAfectado == "master") {
@@ -53,10 +17,7 @@ let movilAfectado = prompt('Ingrese movil Master o Iveco').toLowerCase;
     }else (cargaMaxima = 4000);
 
 
-/*
-tipoCarga * unidadesCarga = cargaParcial++ => pesoCarga. Deberia al final solicitar una condicion para volver a iniciar y sumar los resultados.
-*/
-/* let tipoCarga = prompt("Ingrese 1 para fisiologica o 2 para dextrosa");   
+let tipoCarga = prompt("Ingrese 1 para fisiologica o 2 para dextrosa");   
 let unidadesCarga = parseInt(prompt("Ingrese la cantidad de unidades"));
 
 function pesoCarga(tipoCarga,unidadesCarga) {
@@ -72,10 +33,8 @@ function pesoCarga(tipoCarga,unidadesCarga) {
         };
     };
 
-    
 alert(`El peso estimado es ${pesoCarga(tipoCarga, unidadesCarga)} kg`);
 
 if (pesoCarga(tipoCarga, unidadesCarga) > cargaMaxima) {
     alert(`El vehiculo esta exedido de peso`);
-};
- */
+} else (alert("Buen viaje!"));
