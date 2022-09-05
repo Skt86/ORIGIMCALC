@@ -1,15 +1,23 @@
 //Registro de viaje y calculadora de peso de carga
 
-//datos generales
+//Funciones y parametros generales
 
 
 let pesoFisiologica = 8;
 let pesoDextrosa= 11;
 
+//Validacion de usuario
+
 usuario = prompt('ingrese el usuario correcto');
+while(!usuario){
+    alert("Por favor ingrese un usuario");
+    usuario = prompt('ingrese el usuario correcto');
+}
 
 alert(`Hola ${usuario}, bienvenido a la calculadora de peso`);
 
+
+//Calculadora de peso
 let movilAfectado = prompt('Ingrese movil Master o Iveco').toLowerCase;
 
     if (movilAfectado == "master") {

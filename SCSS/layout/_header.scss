@@ -1,0 +1,55 @@
+$clr-verdeclaro: #80ED99;
+$clr-oscuro: #57CC99;
+$clr-turquesa: #38A3A5;
+$clr-azul: #22577A;
+$br-05: 0.5em;
+$pd-headderfooter: 1em;
+
+
+header  {
+    @include mains;
+        position: sticky;
+        top: 0px;
+        right: 0px;
+        left: 0px;
+        z-index: 1;
+        background: $clr-oscuro;
+        background: linear-gradient(to left, #38A3A5,#57CC99);
+        nav    {            
+            a   {
+                text-decoration: none;
+                color: $clr-azul;
+                font-weight: bold;
+            }
+        }
+        img {
+            padding: 10px;
+            max-width: 141px;
+            height: auto;
+        }
+        h1  {
+            display: none;
+            color: $clr-azul;
+    }   
+}
+
+
+
+@media (min-width: 425px) {
+    header  {
+        nav {
+            a   {
+                padding-left: 30px;
+                font-weight: bolder;
+            }
+            a:hover {
+                color: $clr-oscuro;
+                transform: scale(1.2);
+            }
+        }
+        h1  {
+            display: block;
+        }
+    }
+    
+}
