@@ -2,6 +2,49 @@
 
 //Funciones y parametros generales
 
+class nuevoViaje {
+    constructor(fechaViaje, origenViaje, destinoViaje, distanciaRecorrida) {
+        this.fechaViaje = fechaViaje;
+        this.origenViaje = origenViaje.toUpperCase();
+        this.destinoViaje = destinoViaje.toUpperCase();
+        this.distanciaRecorrida = distanciaRecorrida;
+    }
+}
+
+function registrarViaje() {
+    let tramosViaje = parseInt(prompt('Cuantos tramos desea registrar?'));
+    let datosViaje = [];
+
+    for (let i = 0; i < tramosViaje; i++) {
+
+        let fechaViaje = prompt('Ingrese fecha de viaje');
+        while(!fechaViaje){
+            alert('No ha ingresado fecha de viaje, vuelva a intentarlo');
+                fechaViaje = prompt('Ingrese fecha de viaje');
+        };
+
+        let origenViaje = prompt('Ingrese provincia de origen');
+        
+        let destinoViaje = prompt('provincia de destino');
+
+        let distanciaRecorrida = parseInt(prompt('Ingrese los kilometros recorridos'));
+
+        let Viaje = new nuevoViaje(fechaViaje, origenViaje, destinoViaje, distanciaRecorrida);
+        datosViaje.push(Viaje);
+    }
+    return datosViaje;
+};
+
+function registroViaje(datosViaje) {
+    for (const Viaje of datosViaje) {
+        alert(`FECHA: ${Viaje.fechaViaje}\n ORIGEN: ${Viaje.origenViaje}\n DESTINO: ${Viaje.destinoViaje}\n KM: ${Viaje.distanciaRecorrida}`);
+    }
+};
+
+function main() {
+    let datosViaje = registrarViaje();
+    registroViaje(datosViaje);
+};
 
 let pesoFisiologica = 8;
 let pesoDextrosa= 11;
